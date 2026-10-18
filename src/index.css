@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { @apply bg-mist text-ink font-body antialiased overflow-x-hidden; }
+  h1, h2, h3, h4 { @apply font-display tracking-tight; }
+  select option { color: #052A33; }
+  ::selection { background: #29B6D3; color: #fff; }
+  :focus-visible { outline: 3px solid #FFC93C; outline-offset: 3px; border-radius: 8px; }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 font-display font-semibold text-base
+      transition-transform duration-150 select-none;
+  }
+  .btn:hover { transform: translateY(-2px); }
+  .btn:active { transform: translateY(1px); }
+  .btn-primary { @apply bg-gradient-to-r from-aqua to-teal text-white shadow-glow; }
+  .btn-sun { @apply bg-sun text-ink shadow-sun; }
+  .btn-outline { @apply border-2 border-teal text-teal hover:bg-teal hover:text-white; }
+  .btn-glass { @apply border border-white/40 text-white bg-white/10 hover:bg-white hover:text-ink; }
+  .field {
+    @apply w-full rounded-xl border-2 border-sky/70 bg-white px-4 py-3 text-ink placeholder:text-ink/40
+      focus:border-aqua focus:outline-none transition-colors;
+  }
+  /* shimmering gradient lettering */
+  .shine-text {
+    background: linear-gradient(100deg, #29B6D3 0%, #fff 25%, #FFC93C 50%, #fff 75%, #29B6D3 100%);
+    background-size: 200% 100%;
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+    @apply animate-shine;
+  }
+  .shine-text-dark {
+    background: linear-gradient(100deg, #0E7C8F 0%, #29B6D3 30%, #FFC93C 50%, #29B6D3 70%, #0E7C8F 100%);
+    background-size: 200% 100%;
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+    @apply animate-shine;
+  }
+}
+
+/* the scroll story: a dirty room, wiped clean from left to right as you scroll */
+.story-stage { --seam: 70px; }
+.clip-clean { clip-path: polygon(0 0, calc(var(--w) * 1% + var(--seam)) 0, calc(var(--w) * 1% - var(--seam)) 100%, 0 100%); }
+.clip-foam { clip-path: polygon(0 0, calc(var(--w) * 1% + var(--seam) + 22px) 0, calc(var(--w) * 1% - var(--seam) + 22px) 100%, 0 100%); }
+.clip-haze { clip-path: polygon(0 0, calc(var(--w) * 1% + var(--seam) + 64px) 0, calc(var(--w) * 1% - var(--seam) + 64px) 100%, 0 100%); }
+.dirty-filter { filter: saturate(0.28) brightness(0.64) sepia(0.5) contrast(1.06); }
+
+@keyframes twinkle {
+  0%, 100% { transform: scale(0) rotate(0deg); opacity: 0; }
+  50% { transform: scale(1) rotate(45deg); opacity: 1; }
+}
+.twinkle { transform-box: fill-box; transform-origin: center; animation: twinkle 2.6s ease-in-out infinite; }
+
+@keyframes mote {
+  0% { transform: translate(0, 0); opacity: 0; }
+  20% { opacity: 0.7; }
+  100% { transform: translate(26px, -38px); opacity: 0; }
+}
+.mote { animation: mote 7s ease-in-out infinite; }
+
+@keyframes cursor-star {
+  from { transform: translate(-50%, -50%) scale(1) rotate(0deg); opacity: 1; }
+  to { transform: translate(-50%, calc(-50% + 26px)) scale(0) rotate(120deg); opacity: 0; }
+}
+.cursor-star { animation: cursor-star 0.8s ease-out forwards; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
