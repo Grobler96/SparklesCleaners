@@ -19,7 +19,7 @@ export default function SparkleCursor() {
       s.setAttribute('viewBox', '-1 -1 2 2');
       s.setAttribute('class', 'cursor-star absolute');
       s.setAttribute('style', `left:${lx}px;top:${ly}px;width:${size}px;height:${size}px`);
-      s.innerHTML = `<path d="${star}" fill="${Math.random() > 0.5 ? '#fff' : '#FFC93C'}"/>`;
+      s.innerHTML = `<path d="${star}" fill="${Math.random() > 0.5 ? '#fff' : '#FFD60A'}"/>`;
       s.addEventListener('animationend', () => s.remove());
       el.appendChild(s);
     };

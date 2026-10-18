@@ -9,10 +9,10 @@ export default function Process() {
   return (
     <ol ref={ref} className="relative mx-auto grid max-w-5xl gap-10 md:grid-cols-3 md:gap-8">
       <span aria-hidden="true" className="absolute bottom-6 left-7 top-6 w-1 rounded-full bg-sky/40 md:hidden">
-        <motion.span style={{ scaleY: scrollYProgress }} className="absolute inset-0 origin-top rounded-full bg-gradient-to-b from-aqua to-sun" />
+        <motion.span style={{ scaleY: scrollYProgress }} className="absolute inset-0 origin-top rounded-full bg-gradient-to-b from-aqua to-pop" />
       </span>
       <span aria-hidden="true" className="absolute left-[16.6%] right-[16.6%] top-7 hidden h-1 rounded-full bg-sky/40 md:block">
-        <motion.span style={{ scaleX: scrollYProgress }} className="absolute inset-0 origin-left rounded-full bg-gradient-to-r from-aqua to-sun" />
+        <motion.span style={{ scaleX: scrollYProgress }} className="absolute inset-0 origin-left rounded-full bg-gradient-to-r from-aqua to-pop" />
       </span>
       {steps.map((s, i) => (
         <motion.li

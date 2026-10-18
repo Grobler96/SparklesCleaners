@@ -21,7 +21,7 @@ function Actions({ actions }: { actions: NonNullable<Chapter['actions']> }) {
   return (
     <div className="mt-6 flex flex-wrap gap-3">
       {actions.map((a) => (
-        <Link key={a.label} to={a.to} className={`btn !py-3 ${a.kind === 'sun' ? 'btn-sun' : 'btn-glass max-md:hidden'}`}>
+        <Link key={a.label} to={a.to} className={`btn !py-3 ${a.kind === 'sun' ? 'btn-pop' : 'btn-glass max-md:hidden'}`}>
           {a.label}
         </Link>
       ))}
@@ -38,7 +38,7 @@ function ChapterText({ c }: { c: Chapter }) {
       {c.body && <p className="mt-3 text-[0.95rem] sm:text-lg text-white/80 leading-relaxed max-w-md">{c.body}</p>}
       {c.actions && <Actions actions={c.actions} />}
       {c.hint && (
-        <p className="mt-5 inline-flex items-center gap-2 text-sm text-sky font-semibold">
+        <p className="mt-5 inline-flex items-center gap-2 text-sm text-sky font-semibold max-md:hidden">
           Scroll to clean this room <ChevronDown size={18} className="animate-bounce" />
         </p>
       )}
@@ -80,7 +80,7 @@ function AnimatedStory({ kind, label, chapters, wipe }: Props) {
   return (
     <section ref={ref} aria-label={label} className="relative h-[440svh] md:h-[480svh]">
       <div className="story-stage sticky top-[4.5rem] h-[calc(100svh-4.5rem)] overflow-hidden bg-ink">
-        <motion.div style={{ '--w': w } as MotionStyle} className="absolute inset-x-0 top-0 h-[56%] md:inset-0 md:h-full">
+        <motion.div style={{ '--w': w } as MotionStyle} className="absolute inset-x-0 top-0 h-[54%] md:inset-0 md:h-full">
           <div className="absolute inset-0">
             <div className="dirty-filter absolute inset-0"><Room kind={kind} uid={`${kind}d`} /></div>
             <Grime kind={kind} />
@@ -109,12 +109,12 @@ function AnimatedStory({ kind, label, chapters, wipe }: Props) {
               <motion.span className="text-base text-white">{meterText}</motion.span>
             </div>
             <div className="mt-2 h-2 overflow-hidden rounded-full bg-white/15">
-              <motion.div style={{ width: meterBar }} className="h-full rounded-full bg-gradient-to-r from-aqua to-sun" />
+              <motion.div style={{ width: meterBar }} className="h-full rounded-full bg-gradient-to-r from-aqua via-pop to-sun" />
             </div>
           </div>
         </motion.div>
 
-        <div className="absolute inset-x-0 bottom-0 grid h-[44%] bg-ink max-md:items-center max-md:pb-[4.25rem] md:inset-auto md:bottom-12 md:left-[6vw] md:h-auto md:w-[500px] md:bg-transparent">
+        <div className="absolute inset-x-0 bottom-0 grid h-[46%] bg-ink max-md:items-center max-md:pb-[4.25rem] md:inset-auto md:bottom-12 md:left-[6vw] md:h-auto md:w-[500px] md:bg-transparent">
           {chapters.map((c) => <ChapterView key={c.from} c={c} progress={progress} />)}
         </div>
       </div>

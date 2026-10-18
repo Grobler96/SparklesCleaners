@@ -12,7 +12,7 @@ export default function CTABand({ title = 'Ready for sparkle?', text = 'Tell us 
         <h2 className="font-display text-4xl font-extrabold sm:text-6xl">{title}</h2>
         <p className="mx-auto mt-4 max-w-xl text-lg text-white/85">{text}</p>
         <div className="mt-8 flex flex-wrap justify-center gap-3">
-          <Link to="/contact" className="btn btn-sun">Get your free quote <ArrowRight size={18} /></Link>
+          <Link to="/contact" className="btn btn-pop">Get your free quote <ArrowRight size={18} /></Link>
           <a href={site.phoneHref} className="btn btn-glass"><Phone size={18} /> {site.phone}</a>
         </div>
       </Reveal>

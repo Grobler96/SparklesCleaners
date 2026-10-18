@@ -24,7 +24,7 @@ export default function ServicePage() {
             <p className="font-display text-xs font-semibold uppercase tracking-[0.22em] text-sky sm:text-sm">{p.eyebrow}</p>
             <h1 className="mt-3 font-display text-4xl font-extrabold leading-[1.05] sm:text-6xl">{p.title}</h1>
             <p className="mt-5 max-w-xl text-lg leading-relaxed text-white/80">{p.blurb}</p>
-            <Link to="/contact" className="btn btn-sun mt-8">{p.cta} <ArrowRight size={18} /></Link>
+            <Link to="/contact" className="btn btn-pop mt-8">{p.cta} <ArrowRight size={18} /></Link>
             <p className="mt-4 text-sm text-white/60">Drag the room on the right to clean it.</p>
           </div>
           <BeforeAfter kind={p.kind} />

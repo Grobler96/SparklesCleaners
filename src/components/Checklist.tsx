@@ -7,7 +7,7 @@ type Which = keyof typeof checklists;
 function Tick({ delay }: { delay: number }) {
   return (
     <span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-aqua/15">
-      <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="#0E7C8F" strokeWidth="3.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="#0057FF" strokeWidth="3.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <motion.path
           d="M5 12.5l4.5 4.5L19 7"
           initial={{ pathLength: 0 }}

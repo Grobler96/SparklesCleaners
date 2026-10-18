@@ -9,15 +9,15 @@ function Defs({ uid, kind }: { uid: string; kind: SceneKind }) {
   return (
     <defs>
       <linearGradient id={`${uid}wall`} x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0" stopColor="#F4FCFE" />
-        <stop offset="1" stopColor="#CDEEF5" />
+        <stop offset="0" stopColor="#F6FBFF" />
+        <stop offset="1" stopColor="#CFE4FF" />
       </linearGradient>
       <linearGradient id={`${uid}floor`} x1="0" y1="0" x2="0" y2="1">
         <stop offset="0" stopColor={floor[0]} />
         <stop offset="1" stopColor={floor[1]} />
       </linearGradient>
       <linearGradient id={`${uid}sky`} x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0" stopColor="#8FD8F5" />
+        <stop offset="0" stopColor="#7FD2FF" />
         <stop offset="1" stopColor="#EAFAFF" />
       </linearGradient>
       <radialGradient id={`${uid}glow`}>
@@ -59,39 +59,39 @@ function Home({ uid }: { uid: string }) {
       <rect x="497" y="70" width="6" height="240" fill="#fff" />
       <rect x="390" y="187" width="220" height="6" fill="#fff" />
       <rect x="366" y="316" width="268" height="14" rx="4" fill="#fff" />
-      <path d="M330 52h72v268c-34-8-62-40-72-96z" fill="#3CC3DD" />
-      <path d="M670 52h-72v268c34-8 62-40 72-96z" fill="#3CC3DD" />
+      <path d="M330 52h72v268c-34-8-62-40-72-96z" fill="#FF4FA3" />
+      <path d="M670 52h-72v268c34-8 62-40 72-96z" fill="#FF4FA3" />
       <rect x="318" y="42" width="364" height="9" rx="4" fill="#8A6B45" />
       <polygon points="400,322 610,322 780,700 260,700" fill={`url(#${uid}ray)`} opacity=".55" />
       {/* picture */}
       <rect x="190" y="140" width="130" height="100" rx="4" fill="#fff" stroke="#8A6B45" strokeWidth="6" />
-      <path d="M196 214c24-30 44-6 66-22s40-14 52 4v28h-118z" fill="#29B6D3" />
-      <circle cx="282" cy="170" r="14" fill="#FFC93C" />
+      <path d="M196 214c24-30 44-6 66-22s40-14 52 4v28h-118z" fill="#FF4FA3" />
+      <circle cx="282" cy="170" r="14" fill="#FFD60A" />
       {/* shelf */}
       <rect x="760" y="250" width="190" height="10" rx="3" fill="#8A6B45" />
       <rect x="772" y="206" width="16" height="44" fill="#FF8A65" />
-      <rect x="790" y="214" width="14" height="36" fill="#29B6D3" />
-      <rect x="806" y="200" width="18" height="50" fill="#FFC93C" />
-      <rect x="880" y="214" width="46" height="36" rx="4" fill="#fff" stroke="#0E7C8F" strokeWidth="3" />
+      <rect x="790" y="214" width="14" height="36" fill="#FF2E93" />
+      <rect x="806" y="200" width="18" height="50" fill="#FFD60A" />
+      <rect x="880" y="214" width="46" height="36" rx="4" fill="#fff" stroke="#0057FF" strokeWidth="3" />
       {/* rug, coffee table */}
       <ellipse cx="390" cy="590" rx="300" ry="62" fill="#F7EBD2" />
-      <ellipse cx="390" cy="590" rx="250" ry="46" fill="none" stroke="#29B6D3" strokeWidth="4" strokeDasharray="14 10" />
+      <ellipse cx="390" cy="590" rx="250" ry="46" fill="none" stroke="#FF2E93" strokeWidth="4" strokeDasharray="14 10" />
       {/* sofa */}
-      <rect x="170" y="300" width="380" height="110" rx="26" fill="#2A9DB5" />
-      <rect x="135" y="350" width="50" height="120" rx="22" fill="#2A9DB5" />
-      <rect x="535" y="350" width="50" height="120" rx="22" fill="#2A9DB5" />
-      <rect x="150" y="380" width="420" height="90" rx="22" fill="#33B2CB" />
-      <rect x="195" y="335" width="165" height="70" rx="18" fill="#6FD3E6" />
-      <rect x="362" y="335" width="165" height="70" rx="18" fill="#6FD3E6" />
-      <rect x="210" y="345" width="46" height="46" rx="10" fill="#FFC93C" transform="rotate(-12 233 368)" />
+      <rect x="170" y="300" width="380" height="110" rx="26" fill="#2F6BFF" />
+      <rect x="135" y="350" width="50" height="120" rx="22" fill="#2F6BFF" />
+      <rect x="535" y="350" width="50" height="120" rx="22" fill="#2F6BFF" />
+      <rect x="150" y="380" width="420" height="90" rx="22" fill="#4C82FF" />
+      <rect x="195" y="335" width="165" height="70" rx="18" fill="#9CBBFF" />
+      <rect x="362" y="335" width="165" height="70" rx="18" fill="#9CBBFF" />
+      <rect x="210" y="345" width="46" height="46" rx="10" fill="#FFD60A" transform="rotate(-12 233 368)" />
       <rect x="170" y="470" width="14" height="16" fill="#6B4E2E" />
       <rect x="536" y="470" width="14" height="16" fill="#6B4E2E" />
       <rect x="290" y="530" width="200" height="18" rx="6" fill="#fff" />
       <rect x="305" y="548" width="10" height="42" fill="#fff" />
       <rect x="465" y="548" width="10" height="42" fill="#fff" />
-      <rect x="380" y="506" width="26" height="25" rx="5" fill="#fff" stroke="#0E7C8F" strokeWidth="3" />
-      <path d="M406 513h8a6 6 0 010 14h-8" fill="none" stroke="#0E7C8F" strokeWidth="3" />
-      <rect x="425" y="522" width="56" height="8" fill="#FFC93C" />
+      <rect x="380" y="506" width="26" height="25" rx="5" fill="#fff" stroke="#0057FF" strokeWidth="3" />
+      <path d="M406 513h8a6 6 0 010 14h-8" fill="none" stroke="#0057FF" strokeWidth="3" />
+      <rect x="425" y="522" width="56" height="8" fill="#FFD60A" />
       {/* side table, lamp */}
       <rect x="640" y="410" width="90" height="14" rx="4" fill="#fff" />
       <rect x="676" y="424" width="8" height="52" fill="#fff" />
@@ -113,7 +113,7 @@ function Office({ uid }: { uid: string }) {
   const monitor = (x: number) => (
     <>
       <rect x={x} y="326" width="150" height="88" rx="6" fill="#20323A" />
-      <rect x={x + 8} y="334" width="134" height="68" rx="3" fill="#7ADDF0" />
+      <rect x={x + 8} y="334" width="134" height="68" rx="3" fill="#6FE0FF" />
       <rect x={x + 18} y="346" width="60" height="6" rx="3" fill="#fff" opacity=".8" />
       <rect x={x + 18} y="360" width="96" height="6" rx="3" fill="#fff" opacity=".6" />
       <rect x={x + 18} y="374" width="76" height="6" rx="3" fill="#fff" opacity=".6" />
@@ -133,7 +133,7 @@ function Office({ uid }: { uid: string }) {
       <circle cx="660" cy="118" r="90" fill={`url(#${uid}glow)`} />
       {towers.map(([x, h, w], i) => (
         <g key={x}>
-          <rect x={x} y={310 - h} width={w} height={h} fill={i % 2 ? '#8CC8DD' : '#6DB4CE'} />
+          <rect x={x} y={310 - h} width={w} height={h} fill={i % 2 ? '#8FB8FF' : '#6A97F5'} />
           {[0, 1, 2, 3].map((r) => <rect key={r} x={x + 8} y={310 - h + 14 + r * 26} width={w - 16} height="8" fill="#fff" opacity=".55" />)}
         </g>
       ))}
@@ -142,15 +142,15 @@ function Office({ uid }: { uid: string }) {
       <polygon points="270,322 740,322 900,700 120,700" fill={`url(#${uid}ray)`} opacity=".5" />
       {/* whiteboard */}
       <rect x="40" y="110" width="176" height="112" rx="6" fill="#fff" stroke="#B9C7CC" strokeWidth="5" />
-      <path d="M58 140h90M58 162h130M58 184h70" stroke="#29B6D3" strokeWidth="6" strokeLinecap="round" />
-      <circle cx="176" cy="190" r="14" fill="none" stroke="#FFC93C" strokeWidth="5" />
+      <path d="M58 140h90M58 162h130M58 184h70" stroke="#2F6BFF" strokeWidth="6" strokeLinecap="round" />
+      <circle cx="176" cy="190" r="14" fill="none" stroke="#FFD60A" strokeWidth="5" />
       <rect x="70" y="222" width="110" height="8" rx="3" fill="#B9C7CC" />
       {/* filing cabinet, cooler */}
       <rect x="900" y="338" width="72" height="132" rx="4" fill="#CFE3E8" />
       {[352, 396, 440].map((y) => <g key={y}><rect x="906" y={y - 8} width="60" height="34" rx="3" fill="#E4F1F4" /><rect x="926" y={y + 6} width="20" height="5" rx="2" fill="#7F959C" /></g>)}
       <rect x="455" y="394" width="54" height="76" rx="6" fill="#fff" />
       <rect x="462" y="338" width="40" height="58" rx="18" fill="#BEE8F5" />
-      <rect x="474" y="420" width="16" height="8" rx="2" fill="#29B6D3" />
+      <rect x="474" y="420" width="16" height="8" rx="2" fill="#FF2E93" />
       {/* desks */}
       <rect x="100" y="422" width="340" height="16" rx="4" fill="#E8C9A0" />
       <rect x="116" y="438" width="12" height="40" fill="#CFE3E8" />
@@ -163,17 +163,17 @@ function Office({ uid }: { uid: string }) {
       {monitor(645)}
       <rect x="650" y="410" width="80" height="8" rx="3" fill="#fff" />
       {/* chairs */}
-      <rect x="222" y="452" width="96" height="72" rx="22" fill="#1C8CA4" />
-      <rect x="236" y="520" width="68" height="14" rx="6" fill="#2A9DB5" />
-      <rect x="672" y="452" width="96" height="72" rx="22" fill="#1C8CA4" />
-      <rect x="686" y="520" width="68" height="14" rx="6" fill="#2A9DB5" />
+      <rect x="222" y="452" width="96" height="72" rx="22" fill="#2F6BFF" />
+      <rect x="236" y="520" width="68" height="14" rx="6" fill="#2F6BFF" />
+      <rect x="672" y="452" width="96" height="72" rx="22" fill="#2F6BFF" />
+      <rect x="686" y="520" width="68" height="14" rx="6" fill="#2F6BFF" />
       {/* plant, bin, mug */}
       <path d="M64 420h46l-7 52H71z" fill="#E37B5B" />
       <ellipse cx="87" cy="380" rx="12" ry="40" fill="#35A66B" />
       <ellipse cx="68" cy="394" rx="10" ry="32" fill="#2E9460" transform="rotate(-30 68 394)" />
       <ellipse cx="106" cy="394" rx="10" ry="32" fill="#2E9460" transform="rotate(30 106 394)" />
       <path d="M520 446h36l-4 36h-28z" fill="#9AAEB5" />
-      <rect x="360" y="400" width="24" height="22" rx="5" fill="#fff" stroke="#0E7C8F" strokeWidth="3" />
+      <rect x="360" y="400" width="24" height="22" rx="5" fill="#fff" stroke="#0057FF" strokeWidth="3" />
     </>
   );
 }
@@ -281,7 +281,7 @@ export function Twinkles({ kind }: { kind: SceneKind }) {
     <svg viewBox="0 0 1000 700" preserveAspectRatio="xMidYMid slice" className="absolute inset-0 h-full w-full" aria-hidden="true" focusable="false">
       {SPARKS[kind].map(([x, y, s], i) => (
         <g key={i} transform={`translate(${x} ${y}) scale(${s})`}>
-          <path className="twinkle" d={star} fill="#fff" stroke="#FFC93C" strokeWidth=".08" style={{ animationDelay: `${(i * 0.37) % 2.6}s` }} />
+          <path className="twinkle" d={star} fill="#fff" stroke="#FFD60A" strokeWidth=".08" style={{ animationDelay: `${(i * 0.37) % 2.6}s` }} />
         </g>
       ))}
     </svg>

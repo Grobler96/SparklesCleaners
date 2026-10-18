@@ -6,9 +6,9 @@
   html { scroll-behavior: smooth; }
   body { @apply bg-mist text-ink font-body antialiased overflow-x-hidden; }
   h1, h2, h3, h4 { @apply font-display tracking-tight; }
-  select option { color: #052A33; }
-  ::selection { background: #29B6D3; color: #fff; }
-  :focus-visible { outline: 3px solid #FFC93C; outline-offset: 3px; border-radius: 8px; }
+  select option { color: #0A0F3D; }
+  ::selection { background: #FF2E93; color: #fff; }
+  :focus-visible { outline: 3px solid #FFD60A; outline-offset: 3px; border-radius: 8px; }
 }
 
 @layer components {
@@ -19,6 +19,7 @@
   .btn:hover { transform: translateY(-2px); }
   .btn:active { transform: translateY(1px); }
   .btn-primary { @apply bg-gradient-to-r from-aqua to-teal text-white shadow-glow; }
+  .btn-pop { @apply bg-pop text-white shadow-pop; }
   .btn-sun { @apply bg-sun text-ink shadow-sun; }
   .btn-outline { @apply border-2 border-teal text-teal hover:bg-teal hover:text-white; }
   .btn-glass { @apply border border-white/40 text-white bg-white/10 hover:bg-white hover:text-ink; }
@@ -28,13 +29,13 @@
   }
   /* shimmering gradient lettering */
   .shine-text {
-    background: linear-gradient(100deg, #29B6D3 0%, #fff 25%, #FFC93C 50%, #fff 75%, #29B6D3 100%);
+    background: linear-gradient(100deg, #00C8FF 0%, #fff 25%, #FFD60A 50%, #fff 75%, #00C8FF 100%);
     background-size: 200% 100%;
     -webkit-background-clip: text; background-clip: text; color: transparent;
     @apply animate-shine;
   }
   .shine-text-dark {
-    background: linear-gradient(100deg, #0E7C8F 0%, #29B6D3 30%, #FFC93C 50%, #29B6D3 70%, #0E7C8F 100%);
+    background: linear-gradient(100deg, #0057FF 0%, #00C8FF 30%, #FF2E93 50%, #00C8FF 70%, #0057FF 100%);
     background-size: 200% 100%;
     -webkit-background-clip: text; background-clip: text; color: transparent;
     @apply animate-shine;

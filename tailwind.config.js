@@ -4,24 +4,26 @@ export default {
   theme: {
     extend: {
       colors: {
-        ink: '#052A33',
-        deep: '#083C49',
-        teal: '#0E7C8F',
-        aqua: '#29B6D3',
-        sky: '#8EE3F2',
-        foam: '#E6F8FB',
-        mist: '#F5FCFD',
-        sun: '#FFC93C',
-        sunsoft: '#FFE9A8',
+        ink: '#0A0F3D',
+        deep: '#14217A',
+        teal: '#0057FF',
+        aqua: '#00C8FF',
+        sky: '#7FE3FF',
+        foam: '#E3F7FF',
+        mist: '#F4FCFF',
+        sun: '#FFD60A',
+        pop: '#FF2E93',
+        sunsoft: '#FFF0A3',
       },
       fontFamily: {
         display: ['Poppins', 'system-ui', 'sans-serif'],
         body: ['Inter', 'system-ui', 'sans-serif'],
       },
       boxShadow: {
-        soft: '0 24px 60px -24px rgba(8,60,73,0.35)',
-        glow: '0 10px 34px -6px rgba(41,182,211,0.6)',
-        sun: '0 10px 30px -6px rgba(255,201,60,0.7)',
+        soft: '0 24px 60px -24px rgba(10,15,61,0.35)',
+        glow: '0 10px 34px -6px rgba(0,120,255,0.55)',
+        pop: '0 10px 34px -6px rgba(255,46,147,0.65)',
+        sun: '0 10px 30px -6px rgba(255,214,10,0.7)',
       },
       keyframes: {
         rise: {
