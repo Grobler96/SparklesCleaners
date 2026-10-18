@@ -1,29 +1,31 @@
 # Sparkle Cleaners website
 
-A simple, responsive one-page website — no build tools, no dependencies. Just static files you can upload straight to GitHub.
+Domestic and commercial cleaning in Leeds. Vite + React + TypeScript + Tailwind + Framer Motion.
 
-## Files
+The home page is a scroll story: a grubby room is wiped clean as you scroll, then the same for an office.
 
-- `index.html` — the whole page
-- `style.css` — all styling
-- `script.js` — mobile menu + quote form
-- `assets/logo.jpg` — your logo (used as the site favicon)
+```bash
+npm install
+npm run dev        # local development
+npm run build      # production build into dist/ (also writes a page per route, sitemap.xml and robots.txt)
+npm run lint && npm run typecheck
+```
 
-## How to put this on GitHub Pages (free hosting)
+## Content
 
-1. Go to [github.com](https://github.com) and create a new repository (e.g. `sparkle-cleaners`). Keep it **public**.
-2. Open the repo, click **Add file → Upload files**.
-3. Drag in `index.html`, `style.css`, `script.js`, and the `assets` folder (with `logo.jpg` inside) — upload them one by one if GitHub's uploader won't take the folder at once, keeping the same file names and the `assets/` folder structure.
-4. Scroll down and click **Commit changes**.
-5. Go to the repo's **Settings → Pages**.
-6. Under "Build and deployment", set **Source** to `Deploy from a branch`, branch `main`, folder `/ (root)`. Click **Save**.
-7. Wait a minute, then refresh — GitHub will show you a live URL like `https://yourusername.github.io/sparkle-cleaners/`.
+- Business details (phone, email, area, form endpoint): `src/config/site.ts`
+- Services, prices, checklists, steps and service-page copy: `src/data/content.ts`
+- Page titles and descriptions: `src/data/seo.json` (every route must have an entry or the build fails)
+- Story chapters and wipe timings: `src/pages/Home.tsx`
+- The illustrated rooms: `src/components/scene/Scene.tsx`
 
-That's it — the site is live and free to host.
+## Before launch
 
-## Things to customize before launch
+- Replace the phone number, email address and prices in `site.ts` / `content.ts` (carried over from the first placeholder site).
+- Add real customer reviews when there are some (none are shown until then).
+- Set `formEndpoint` in `site.ts` to a Formspree or Web3Forms URL so enquiries are emailed to the business. Until then the quote form opens the visitor's email app.
 
-- Swap the phone number, email, and service area in the **Contact** section of `index.html`.
-- Update prices in the **Services** section to match your real rates.
-- Replace the placeholder reviews with real customer quotes.
-- The quote form currently just shows a thank-you message in the browser — it doesn't send an email yet. To receive real submissions, connect it to a free form service like [Formspree](https://formspree.io) (swap the `<form>` tag's behavior) or a Google Form.
+## Deployment
+
+Pushes to `main` build and publish to GitHub Pages via `.github/workflows/deploy.yml`.
+In the repo go to **Settings → Pages → Build and deployment → Source: GitHub Actions**.

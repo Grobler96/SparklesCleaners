@@ -1,0 +1,36 @@
+{
+  "/": {
+    "title": "Sparkle Cleaners | Home & office cleaning in Leeds",
+    "description": "Home, deep, end of tenancy and office cleaning in Leeds and surrounding areas. The same trusted, insured cleaner every visit, with a 100% re-clean guarantee."
+  },
+  "/domestic": {
+    "title": "Home cleaning in Leeds | Sparkle Cleaners",
+    "description": "Regular home cleaning, deep cleans and end of tenancy cleans in Leeds. The same vetted, insured cleaner every visit and a checklist that leaves nothing missed."
+  },
+  "/commercial": {
+    "title": "Office & commercial cleaning in Leeds | Sparkle Cleaners",
+    "description": "Scheduled office, studio and shopfront cleaning in Leeds, before or after your working hours. Reliable, insured and tailored to your space."
+  },
+  "/contact": {
+    "title": "Get a free cleaning quote | Sparkle Cleaners",
+    "description": "Tell us about your home or office and we'll reply within one working day with a price and the next available slot."
+  },
+  "/thank-you": {
+    "title": "Thank you | Sparkle Cleaners",
+    "description": "Your quote request has been received.",
+    "noindex": true
+  },
+  "/privacy": {
+    "title": "Privacy policy | Sparkle Cleaners",
+    "description": "How Sparkle Cleaners uses the details you send us when you ask for a quote."
+  },
+  "/terms": {
+    "title": "Terms | Sparkle Cleaners",
+    "description": "The terms for using the Sparkle Cleaners website and requesting a quote."
+  },
+  "404": {
+    "title": "Page not found | Sparkle Cleaners",
+    "description": "That page doesn't exist, but a spotless home or office is one click away.",
+    "noindex": true
+  }
+}
